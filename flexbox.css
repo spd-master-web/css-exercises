@@ -1,0 +1,91 @@
+/* universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/*
+Absolute units
+----
+1px is the smallest building block of a graphical display like a computer screen
+
+Relative units
+----
+1vw 1/100 of viewport width
+1vh 1/100 of viewport height
+1% represents a fraction of some other value
+
+1rem Font size of the root element.
+1em Font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width.
+
+*/
+
+:root {
+  font-size: 10px;
+  /*
+  1rem = 10px
+  1.5rem = 15px
+  */
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+
+  background-color: yellow;
+  color: black;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.flex-container {
+  min-height: 50vh;
+
+  display: flex;
+  /* default value */
+  flex-direction: row;
+  /* align elements on the MAIN axis */
+  justify-content: space-between;
+  /* align elements on the CROSS axis */
+  align-items: baseline;
+
+  border: 1px dashed magenta;
+}
+
+.flex-container-column {
+
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.flex-item-change-order {
+  order: -1;
+}
+
+
+a {
+  background-color: greenyellow
+}
+
+
+.box {
+  /* the default value */
+  box-sizing: content-box;
+  box-sizing: border-box;
+
+  width: 50%;
+  /* height is not working as expected */
+  height: 50%;
+
+  padding: 0;
+
+  background-color: pink;
+}
+
+.box-special {
+  background-color: magenta;
+}

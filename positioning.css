@@ -1,0 +1,50 @@
+button {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  color: white;
+  background-color: darkcyan;
+}
+
+.relative {
+  position: relative;
+
+  /*  move 20px
+      from the bottom border
+      of it's original position */
+  bottom: 20px;
+}
+
+.absolute {
+  /*  the element is thaken OUT of the document flow
+      (it doesn't take up the needed space) */
+  position: absolute;
+
+  /*  move 20px from the bottom border
+      of it's closest positioned parent (relative, abolute)
+      (in this case this is the <body> element */
+  bottom: 20px;
+  right: 20px;
+
+  background-color: orange
+}
+
+.fixed {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  background-color: plum;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+  background-color: yellowgreen;
+}

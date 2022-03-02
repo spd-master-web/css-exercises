@@ -1,0 +1,45 @@
+body {
+  background-color: rgb(211, 211, 211);
+}
+
+article {
+  margin: 100px auto;
+
+  width: 300px;
+  padding: 50px;
+
+  position: relative;
+
+  background-color: black;
+}
+
+.image {
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  width: 100px;
+  height: 100px;
+
+  float: left;
+
+  background-color: yellow;
+}
+
+.sticker {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: -50px;
+  right: -50px;
+
+  z-index: 1;
+
+  background-color: red;
+  border-radius: 50%;
+}
+
+p {
+  margin: 0;
+  color: white;
+}
