@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* this is the root font size */
+  /* it equals to 1rem */
+  font-size: 20px;
+}
+
+.grid-container {
+  padding: .5rem;
+  margin-bottom: 1rem;
+
+  display: grid;
+
+  /* grid-template-columns: 5rem 5rem 5rem; */
+  grid-template-columns: repeat(3, 5rem);
+
+  /* grid-template-rows: 5rem 5rem 5rem; */
+  grid-template-rows: repeat(3, 5rem);
+
+  gap: .5rem;
+
+  grid-auto-flow: row;
+}
+
+.grid-container-fluid {
+  grid-template-columns: 5rem 1fr 5rem;
+  grid-template-rows: repeat(4, 5rem);
+
+  /* justify-items: stretch; */
+  justify-items: start;
+  /* align-items: stretch; */
+  align-items: start;
+}
+
+.grid-item {
+  background-color: pink;
+}
+
+.grid-item-black {
+  background-color: black;
+  color: white;
+
+  /*
+  grid-column-start: 2;
+  grid-column-end: 3;
+  */
+  grid-column: 2 / 3;
+  /*
+  grid-row-start: 1;
+  grid-row-end: 4;
+  */
+  grid-row: 1 / 4;
+  /* shorthand
+  grid: 2 / 3 / 1 / 4;
+  */
+  z-index: 1;
+}
+
+.grid-item-red {
+  background-color: red;
+  color: white;
+
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.grid-item-yellow {
+  background-color: yellow;
+
+  grid-column: span 1;
+  grid-row: span 4;
+
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+@media (max-width: 16.5rem) {
+  .grid-container {
+    grid-template-columns: 5rem 5rem;
+  }
+  .grid-item {
+    background-color: yellow;
+  }
+}
+
+/*
+font-size: 20px;
+.25rem  = 5px
+.5rem   = 10px
+1rem    = 20px
+5rem    = 100px
+*/
+
+/*
+  font-size: 30px;
+  .25rem  = 7.5px
+  .5rem   = 15px
+  1rem    = 30px
+  5rem    = 150px
+*/
