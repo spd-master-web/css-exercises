@@ -41,3 +41,27 @@ p {
     background-color: var(--color);
   }
 }
+
+/* Scss */
+.modal {
+  margin: 0;
+
+  &-dialog {
+    padding: 0;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+}
+
+/* turned into CSS */
+.modal {
+  margin: 0;
+}
+.modal-dialog {
+  padding: 0;
+}
+.modal h5 {
+  font-size: 1,2em;
+}
