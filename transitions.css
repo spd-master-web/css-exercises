@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: grid;
+
+  background-color: coral;
+
+  transition: background-color 200ms ease-out 0s;
+}
+.box:hover {
+  background-color: cornflowerblue;
+
+  transition-property: background-color; /* what property should be animated */
+  transition-duration: .5s; /* how long should the transition last */
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  /* shorthand */
+  transition: background-color 1200ms ease-in 0s;
+  /* if you want to animate all the animatable properties use the *all* keyword */
+  /* transition: all 1200ms ease-in 0s; */
+}
+
+.box .box-inside {
+  transition: font-size 200ms ease-in .5s;
+}
+.box:hover .box-inside {
+  font-size: 2em;
+  transition: font-size 200ms;
+}
+
+.box-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.grid-item {
+  transition: background-color 1s ease-out .5s,
+              border .5s ease-in .5s;
+  background-color: cornflowerblue;
+  border: 10px solid red;
+}
+
+.grid-item:hover {
+  transition: background-color .1s ease-in,
+              border .2s ease-in;
+  background-color: coral;
+  border: 20px solid black;
+}
