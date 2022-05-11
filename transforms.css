@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.grid-item {
+  transition: background-color 1s ease-out .5s,
+              border .5s ease-in .5s,
+              transform .2s ease-in;
+  background-color: cornflowerblue;
+  border: 10px solid red;
+}
+
+.grid-item:hover {
+  transition: background-color .1s ease-in,
+              border .2s ease-in,
+              transform .2s ease-in;
+  background-color: coral;
+  border: 20px solid black;
+
+  /* CSS TRANSFORMS */
+  /* scale() for size
+  rotate() for rotation
+  translate() for position */
+
+  /* for multiple, transforms you list them one after another */
+  transform: scale(2) rotate(45deg);
+}
+
+
+.element {
+  margin-top: 2rem;
+  width: 200px;
+  height: 200px;
+
+  background-color: crimson;
+  transition: transform 1000ms;
+
+  /* transform: rotate(2turn);
+  transform-origin: 100% 100%;
+  transform-origin: bottom right; */
+
+  animation-name: boxAnimation;
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes boxAnimation {
+  0% {
+    background-color: hsl(348, 83%, 47%);
+    transform: scale(.5) rotate(0);
+  }
+  50% {
+    background-color: hsl(148, 83%, 47%);
+    transform: scale(1) rotate(45deg);
+  }
+  100% {
+    background-color: hsl(248, 83%, 47%);
+    transform: scale(.3) rotate(145deg);
+  }
+}
