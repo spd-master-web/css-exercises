@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <link rel="stylesheet" href="jquery.css">
+<body>
+  <!-- https://jquery.com/ -->
+  <p>Hello it's me</p>
+
+  <ul>
+    <li>Lorem.</li>
+    <li class="select-me">inbetween</li>
+    <li>Quibusdam?</li>
+    <li>Minima?</li>
+  </ul>
+
+  <p class="change-me">Hello</p>
+  <button id="change">Change</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <script src="jquery-script.js"></script> -->
+  <script>
+    // jQuery
+    // https://api.jquery.com/class-selector/
+
+    // change the background color of the selected element
+    $(".select-me").css("background-color", "red");
+
+    // inside of the selected element prepend or append content
+    $(".select-me").prepend("Hello ");
+    $(".select-me").append(" goodbye!");
+
+    // add a footer to the body
+    $("body").append("<footer>copyright &copy;</footer>");
+    // style that footer
+    $("footer").css("background-color", "white");
+
+    // print a message to the console
+    console.log("hello it's me");
+
+    // button change
+    $("#change").click(function() {
+      $(".change-me").text("I am changed!");
+    });
+
+    //  single line comment in JS
+    /*
+        multi
+        line
+        comment
+    */
+  </script>
+</body>
+</html>
